@@ -19,9 +19,11 @@ const PostsList = ({ posts }: Props) => {
         {posts.map((post) => {
           return (
             <li key={post.slug}>
-              <h2 className="text-lg text-blue-600 dark:text-blue-500 font-medium mt-4">
+              <h2 className="text-lg font-medium mt-4">
                 <Link href={`/${post.slug}`}>
-                  <a>{post.title}</a>
+                  <a className="no-underline text-blue-600 dark:text-blue-500">
+                    {post.title}
+                  </a>
                 </Link>
               </h2>
               <p

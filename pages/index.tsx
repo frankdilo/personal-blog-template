@@ -17,7 +17,7 @@ export default function Home({ posts }: Props) {
           <img
             width="100px"
             height="100px"
-            src="/avatar-no-bg-512.png"
+            src={process.env.NEXT_PUBLIC_AVATAR_URL || "/media/avatar.png"}
             style={{
               display: "block",
               borderRadius: 60,
@@ -25,28 +25,14 @@ export default function Home({ posts }: Props) {
           />
         </ExternalLink>
         <h1 className="text-3xl font-bold mt-3 dark:text-gray-200">
-          Hey, I am Francesco
+          {process.env.NEXT_PUBLIC_HOME_TITLE}
         </h1>{" "}
-        <p className="mt-2 text-xl text-gray-600 dark:text-gray-400 text-center">
-          Programmer & Indie Hacker.
-        </p>
-        <p className="text-xl text-gray-600 dark:text-gray-400 text-center mt-1">
-          Building{" "}
-          <ExternalLink
-            href="https://mailbrew.com/"
-            className="border-solid border-b-4 border-red-500 dark:border-red-800"
-          >
-            Mailbrew
-          </ExternalLink>{" "}
-          in the{" "}
-          <ExternalLink
-            href="https://twitter.com/frankdilo"
-            className="border-solid border-b-4 border-blue-500 dark:border-blue-800"
-          >
-            open
-          </ExternalLink>
-          .
-        </p>
+        <p
+          className="index_subheader mt-2 text-xl text-gray-600 dark:text-gray-400 text-center"
+          dangerouslySetInnerHTML={{
+            __html: process.env.NEXT_PUBLIC_HOME_SUBTITLE,
+          }}
+        ></p>
       </div>
       <PostsList posts={posts} />
     </Page>
