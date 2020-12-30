@@ -1,7 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-// We customize the document to apply dark mode classes directly to the body and avoid white flashes on first load
-class MyDocument extends Document {
+// We customize the document to apply dark mode classes directly to the body
+// and avoid white flashes on first load and when the system appearance changes
+class CustomDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
@@ -20,4 +21,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+export default CustomDocument;

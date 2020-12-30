@@ -14,8 +14,8 @@ const Post = ({ post }: Props) => {
   return (
     <Page title={post.title}>
       <Link href="/">
-        <a className="text-3xl text-gray-600 pb-6 sm:pb-10 font-semibold block">
-          ⌘
+        <a className="text-2xl text-gray-600 pb-6 sm:pb-10 font-semibold block">
+          ←
         </a>
       </Link>
 
@@ -48,7 +48,7 @@ const Post = ({ post }: Props) => {
       />
 
       <div className="text-gray-500 text-center mt-24 flex w-full justify-center">
-        <Link href="/">home</Link>
+        <Link href="/">←</Link>
         <ExternalLink href="/rss" className="ml-6">
           /rss
         </ExternalLink>
