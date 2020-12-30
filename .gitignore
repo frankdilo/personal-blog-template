@@ -32,3 +32,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+/.env
+
+# files genrated at build time
+dropbox_download.zip
+/_content
+/public/media
+/public/rss.xml
