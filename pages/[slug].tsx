@@ -48,10 +48,7 @@ const Post = ({ post }: Props) => {
       />
 
       <div className="text-gray-500 text-center mt-24 flex w-full justify-center">
-        <Link href="/">⌘</Link>
-        <ExternalLink href="https://twitter.com/frankdilo" className="ml-6">
-          @frankdilo
-        </ExternalLink>
+        <Link href="/">home</Link>
         <ExternalLink href="/rss" className="ml-6">
           /rss
         </ExternalLink>

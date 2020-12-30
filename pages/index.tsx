@@ -13,7 +13,7 @@ export default function Home({ posts }: Props) {
   return (
     <Page title="Francesco Di Lorenzo">
       <div className="flex flex-col items-center text-xl">
-        <ExternalLink href="https://twitter.com/frankdilo">
+        <ExternalLink href={process.env.NEXT_PUBLIC_SOCIAL_URL}>
           <img
             width="100px"
             height="100px"

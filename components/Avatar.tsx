@@ -7,7 +7,7 @@ interface Props {
 
 const Avatar = ({ size = "100", className }: Props) => {
   return (
-    <ExternalLink href="https://twitter.com/frankdilo">
+    <ExternalLink href={process.env.NEXT_PUBLIC_SOCIAL_URL}>
       <img
         width={size}
         height={size}
